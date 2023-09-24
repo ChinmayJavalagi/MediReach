@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medireach/screens/chatbot_screen.dart';
 import 'package:medireach/screens/login_screen.dart';
 
 import '../utils/constants.dart';
@@ -31,7 +32,7 @@ class DashboardCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => LoginScreen(),
+            builder: (context) => ChatBotScreen(),
           ),
         );
       },
