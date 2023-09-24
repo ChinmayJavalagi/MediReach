@@ -51,28 +51,7 @@ class _SignUpAuthScreenState extends State<SignUpAuthScreen> {
                   style: GoogleFonts.manrope(textStyle: kQuestionHeaderTextStyle),
                 ),
                 SizedBox(height: 280,),
-                CustomButton(buttonText: 'Verify', buttonColor: Pallete.primaryThemeColor,onpressed: auth,)
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //   children: [
-                //     CustomButton(buttonColor: Pallete.grayColor2,buttonText: 'Skip',onpressed: (){
-                //       Navigator.pushReplacement(context,
-                //           MaterialPageRoute(builder:
-                //               (context) =>
-                //               SignUpScreen(),
-                //           )
-                //       );
-                //     },),
-                //     CustomButton(buttonText: 'Register', buttonColor: Pallete.primaryThemeColor,onpressed: (){
-                //       Navigator.pushReplacement(context,
-                //           MaterialPageRoute(builder:
-                //               (context) =>
-                //               SignUpScreen(),
-                //           )
-                //       );
-                //     },)
-                //   ],
-                // )
+                CustomButton(buttonText: 'Verify', buttonColor: Pallete.primaryThemeColor,onpressed: auth,),
               ],
             ),
           ),

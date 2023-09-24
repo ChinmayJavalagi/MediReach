@@ -4,6 +4,7 @@ import 'package:medireach/screens/login_screen.dart';
 import 'package:medireach/screens/signup_auth_screen.dart';
 import 'package:medireach/screens/signup_screen.dart';
 import 'package:medireach/screens/splash_screen.dart';
+import 'package:medireach/screens/survey_screen.dart';
 import 'package:medireach/utils/pallete.dart';
 
 void main() {
@@ -22,12 +23,13 @@ class MediReach extends StatelessWidget {
             backgroundColor: Pallete.whiteColor,
           )
       ),
-      initialRoute: SplashScreen.id,
+      initialRoute: SurveyScreen.id,
       routes: {
         SplashScreen.id : (context)=> SplashScreen(),
         LoginScreen.id:(context)=> LoginScreen(),
         SignUpScreen.id : (context)=> SignUpScreen(),
         DashboardScreen.id : (context)=> DashboardScreen(),
+        SurveyScreen.id : (context)=> SurveyScreen(),
       },
     );
   }

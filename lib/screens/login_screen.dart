@@ -38,14 +38,12 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Padding(
             padding: const EdgeInsets.only(top: 30,left: 10,right: 10,bottom: 15),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Center(
-                  child: Text(
-                    "Login",
-                    style: GoogleFonts.manrope(
-                      textStyle: kHeaderTextStyle,
-                    ),
+                Text(
+                  "Login",
+                  style: GoogleFonts.manrope(
+                    textStyle: kHeaderTextStyle,
                   ),
                 ),
                 SizedBox(height: 50,),
