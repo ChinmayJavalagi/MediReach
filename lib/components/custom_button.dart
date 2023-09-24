@@ -8,26 +8,19 @@ import '../utils/constants.dart';
 class CustomButton extends StatelessWidget {
   final String buttonText;
   final Color buttonColor;
+  final VoidCallback onpressed;
 
-  CustomButton({required this.buttonText, required this.buttonColor});
+  CustomButton({required this.buttonText, required this.buttonColor,required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
-        elevation: 5.0,
         color: buttonColor,
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: (){
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder:
-                    (context) =>
-                    SignUpScreen(),
-                )
-            );
-          },
+          onPressed: onpressed,
           minWidth: 150.0,
           height: 40.0,
           child: Text(
