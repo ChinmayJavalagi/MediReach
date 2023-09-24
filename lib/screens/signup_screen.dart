@@ -31,11 +31,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Column(
                 children: [
                   TextFieldForm(fieldname: 'Full Name', hint: 'ex: Medha Kambli'),
-                  TextFieldForm(fieldname: 'Gender', hint: 'ex: Male'),
+                  TextFieldForm(fieldname: 'Gender', hint: 'ex: Female'),
                   TextFieldForm(fieldname: 'Age', hint: 'ex: 25'),
                   TextFieldForm(fieldname: 'Email', hint: 'ex: example@gmail.com'),
                   TextFieldForm(fieldname: 'Phone', hint: 'ex: +91 8888888888'),
-                  TextFieldForm(fieldname: 'Create Password', hint: 'ex: yourpassword'),
+                  // TextFieldForm(fieldname: 'Create Password', hint: 'ex: yourpassword'),
                 ],
               ),
             ],
