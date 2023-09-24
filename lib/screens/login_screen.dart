@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medireach/utils/pallete.dart';
+import '../components/custom_button.dart';
 import '../utils/constants.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -21,8 +22,8 @@ class LoginScreen extends StatelessWidget {
                   textStyle: kHeaderTextStyle,
                 ),
               ),
-
             ),
+            CustomButton(buttonText: 'Login', buttonColor: Pallete.primaryThemeColor,),
           ],
         ),
       ),
