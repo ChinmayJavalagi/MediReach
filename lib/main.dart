@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medireach/screens/dashboard_screen.dart';
 import 'package:medireach/screens/login_screen.dart';
 import 'package:medireach/screens/signup_screen.dart';
 import 'package:medireach/screens/splash_screen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Pallete.whiteColor,
           )
       ),
-      home: const SignUpScreen(),
+      home: DashboardScreen(),
     );
   }
 }
