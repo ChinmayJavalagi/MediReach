@@ -32,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -48,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 50,),
+                SizedBox(height: 0.02 * screenWidth),
                 TextFieldForm(fieldname: "Email", hint: "ex: example@gmail.com"),
                 TextFieldForm(fieldname: "Password", hint: "ex: yourpassword"),
                 SizedBox(height: 35,),

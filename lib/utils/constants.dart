@@ -54,3 +54,15 @@ const kQuestionTextStyle = TextStyle(
   fontSize: 24.0,
   fontWeight: FontWeight.w600,
 );
+
+const kChatTitleStyle = TextStyle(
+  color: Pallete.whiteColor,
+  fontSize: 26.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kChatHeaderStyle = TextStyle(
+  color: Pallete.whiteColor,
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
