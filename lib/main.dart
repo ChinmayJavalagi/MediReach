@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medireach/screens/splashScreen.dart';
+import 'package:medireach/screens/splash_screen.dart';
+import 'package:medireach/utils/pallete.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(backgroundColor: Color(0x15b082)),
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+          scaffoldBackgroundColor: Pallete.primaryThemeColor,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Pallete.primaryThemeColor,
+          )
+      ),
       home: SplashScreen(),
     );
   }
