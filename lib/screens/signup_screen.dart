@@ -15,16 +15,31 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Text(
-              'Sign Up',
-              style: kHeaderTextStyle,
-            ),
-            TextFieldForm(fieldname: 'Full Name', hint: 'Ex: medhakambli06@gmail.com'),
-          ],
+    return Scaffold(
+      body: SafeArea( 
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Sign Up',
+                  style: kHeaderTextStyle,
+                ),
+              ),
+              SizedBox(height: 30.0),
+              Column(
+                children: [
+                  TextFieldForm(fieldname: 'Full Name', hint: 'ex: Medha Kambli'),
+                  TextFieldForm(fieldname: 'Gender', hint: 'ex: Male'),
+                  TextFieldForm(fieldname: 'Age', hint: 'ex: 25'),
+                  TextFieldForm(fieldname: 'Email', hint: 'ex: example@gmail.com'),
+                  TextFieldForm(fieldname: 'Phone', hint: 'ex: +91 8888888888'),
+                  TextFieldForm(fieldname: 'Create Password', hint: 'ex: yourpassword'),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

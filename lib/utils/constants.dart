@@ -9,6 +9,17 @@ const kHeaderTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+const kTextFieldHeaderTextStyle = TextStyle(
+  color: Pallete.primaryThemeColor,
+  fontSize: 12.0,
+  fontWeight: FontWeight.w800,
+);
+
+const kTextFieldHintTextStyle = TextStyle(
+  color: Pallete.grayColor2,
+  fontSize: 14.0,
+);
+
 const kButtonTextStyle = TextStyle(
   color: Pallete.whiteColor,
   fontSize: 14.0,
