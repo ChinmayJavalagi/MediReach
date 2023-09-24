@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'MediReach',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true).copyWith(
           scaffoldBackgroundColor: Pallete.primaryThemeColor,
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Pallete.primaryThemeColor,
           )
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
