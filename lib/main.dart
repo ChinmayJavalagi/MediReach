@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medireach/screens/login_screen.dart';
 import 'package:medireach/screens/splash_screen.dart';
 import 'package:medireach/utils/pallete.dart';
 
@@ -16,12 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'MediReach',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(useMaterial3: true).copyWith(
-          scaffoldBackgroundColor: Pallete.primaryThemeColor,
+          scaffoldBackgroundColor: Pallete.whiteColor,
           appBarTheme: AppBarTheme(
-            backgroundColor: Pallete.primaryThemeColor,
+            backgroundColor: Pallete.whiteColor,
           )
       ),
-      home: const SplashScreen(),
+      home: const LoginScreen(),
     );
   }
 }
