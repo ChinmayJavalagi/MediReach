@@ -6,6 +6,7 @@ import 'package:medireach/utils/pallete.dart';
 import '../components/custom_radio_button.dart';
 import '../utils/constants.dart';
 import '../utils/survey_questions.dart';
+import 'dashboard_screen.dart';
 
 class SurveyScreen extends StatefulWidget {
   static String id = 'survey_screen';
@@ -41,7 +42,7 @@ class _SurveyScreenState extends State<SurveyScreen> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 30,left: 10,right: 10,bottom: 15),
-              child: CustomButton(buttonText: "Submit", buttonColor: Pallete.primaryThemeColor, onpressed: (){}),
+              child: CustomButton(buttonText: "Submit", buttonColor: Pallete.primaryThemeColor, onpressed: ()=> Navigator.pushNamed(context, DashboardScreen.id)),
             ),
           ],
         ),
