@@ -7,7 +7,7 @@ import 'package:medireach/utils/pallete.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  static String id = 'splash_screen';
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -19,12 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) =>
-                    LoginScreen()
-            )
-        )
+            ()=>Navigator.pushNamed(context, LoginScreen.id)
     );
   }
   Widget build(BuildContext context) {

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,7 +5,6 @@ import 'package:medireach/local_auth_api.dart';
 import 'package:medireach/screens/login_screen.dart';
 import 'package:medireach/screens/signup_screen.dart';
 import 'package:medireach/utils/pallete.dart';
-
 import '../components/custom_button.dart';
 import '../utils/constants.dart';
 

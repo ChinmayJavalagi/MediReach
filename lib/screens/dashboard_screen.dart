@@ -7,6 +7,7 @@ import '../components/dashboard_card.dart';
 import '../components/previous_enquiries_card.dart';
 
 class DashboardScreen extends StatefulWidget {
+  static String id = 'dashboard_screen';
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
 }

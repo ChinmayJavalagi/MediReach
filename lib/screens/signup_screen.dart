@@ -8,7 +8,7 @@ import '../components/text_field.dart';
 import '../utils/constants.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  static String id = 'signup_screen';
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();

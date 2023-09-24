@@ -7,13 +7,10 @@ import 'package:medireach/screens/splash_screen.dart';
 import 'package:medireach/utils/pallete.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MediReach());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class MediReach extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,7 +22,13 @@ class MyApp extends StatelessWidget {
             backgroundColor: Pallete.whiteColor,
           )
       ),
-      home: SignUpAuthScreen(),
+      initialRoute: SplashScreen.id,
+      routes: {
+        SplashScreen.id : (context)=> SplashScreen(),
+        LoginScreen.id:(context)=> LoginScreen(),
+        SignUpScreen.id : (context)=> SignUpScreen(),
+        DashboardScreen.id : (context)=> DashboardScreen(),
+      },
     );
   }
 }
