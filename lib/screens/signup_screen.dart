@@ -22,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 25.0),
                 child: Text(
                   'Sign Up',
                   style: kHeaderTextStyle,
