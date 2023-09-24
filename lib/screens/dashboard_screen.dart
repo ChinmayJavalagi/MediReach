@@ -55,6 +55,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     },
                   )
               ),
+              SizedBox(height: 30,),
               GridView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),

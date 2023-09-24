@@ -36,44 +36,47 @@ class _SignUpAuthScreenState extends State<SignUpAuthScreen> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: 30,left: 10,right: 10,bottom: 15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                'Sign Up',
-                style: GoogleFonts.manrope(textStyle: kHeaderTextStyle),
-              ),
-              SizedBox(
-                height: 150,
-              ),
-              Image.asset('assets/images/pngwing 1.png'),
-              Text(
-                'Scan Your Fingerprint',
-                style: GoogleFonts.manrope(textStyle: kQuestionHeaderTextStyle),
-              ),
-              SizedBox(height: 280,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // CustomButton(buttonColor: Pallete.grayColor2,buttonText: 'Skip',onpressed: (){
-                  //   Navigator.pushReplacement(context,
-                  //       MaterialPageRoute(builder:
-                  //           (context) =>
-                  //           SignUpScreen(),
-                  //       )
-                  //   );
-                  // },),
-                  // CustomButton(buttonText: 'Register', buttonColor: Pallete.primaryThemeColor,onpressed: (){
-                  //   Navigator.pushReplacement(context,
-                  //       MaterialPageRoute(builder:
-                  //           (context) =>
-                  //           SignUpScreen(),
-                  //       )
-                  //   );
-                  // },)
-                ],
-              )
-            ],
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Sign Up',
+                  style: GoogleFonts.manrope(textStyle: kHeaderTextStyle),
+                ),
+                SizedBox(
+                  height: 150,
+                ),
+                Image.asset('assets/images/pngwing 1.png'),
+                Text(
+                  'Scan Your Fingerprint',
+                  style: GoogleFonts.manrope(textStyle: kQuestionHeaderTextStyle),
+                ),
+                SizedBox(height: 280,),
+                CustomButton(buttonText: 'Verify', buttonColor: Pallete.primaryThemeColor,onpressed: auth,)
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     CustomButton(buttonColor: Pallete.grayColor2,buttonText: 'Skip',onpressed: (){
+                //       Navigator.pushReplacement(context,
+                //           MaterialPageRoute(builder:
+                //               (context) =>
+                //               SignUpScreen(),
+                //           )
+                //       );
+                //     },),
+                //     CustomButton(buttonText: 'Register', buttonColor: Pallete.primaryThemeColor,onpressed: (){
+                //       Navigator.pushReplacement(context,
+                //           MaterialPageRoute(builder:
+                //               (context) =>
+                //               SignUpScreen(),
+                //           )
+                //       );
+                //     },)
+                //   ],
+                // )
+              ],
+            ),
           ),
         ),
       ),
