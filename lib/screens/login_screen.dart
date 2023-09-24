@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medireach/utils/pallete.dart';
+import '../utils/constants.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -17,13 +18,10 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 "Login",
                 style: GoogleFonts.manrope(
-                  textStyle: TextStyle(
-                    color: Pallete.primaryThemeColor,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  textStyle: kHeaderTextStyle,
                 ),
               ),
+
             ),
           ],
         ),
