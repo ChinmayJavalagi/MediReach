@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medireach/screens/signup_screen.dart';
 import 'package:medireach/utils/pallete.dart';
 
 import '../utils/constants.dart';
@@ -19,7 +20,14 @@ class CustomButton extends StatelessWidget {
         color: buttonColor,
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder:
+                    (context) =>
+                    SignUpScreen(),
+                )
+            );
+          },
           minWidth: 150.0,
           height: 40.0,
           child: Text(

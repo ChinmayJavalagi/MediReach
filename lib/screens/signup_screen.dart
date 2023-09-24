@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medireach/utils/pallete.dart';
+import '../components/custom_button.dart';
 import '../components/text_field.dart';
 import '../utils/constants.dart';
 
@@ -21,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
                   'Sign Up',
                   style: kHeaderTextStyle,
@@ -36,6 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   TextFieldForm(fieldname: 'Email', hint: 'ex: example@gmail.com'),
                   TextFieldForm(fieldname: 'Phone', hint: 'ex: +91 8888888888'),
                   TextFieldForm(fieldname: 'Create Password', hint: 'ex: yourpassword'),
+                  CustomButton(buttonText: 'Next', buttonColor: Pallete.primaryThemeColor,),
                 ],
               ),
             ],

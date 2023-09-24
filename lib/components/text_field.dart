@@ -23,6 +23,7 @@ class TextFieldForm extends StatelessWidget {
           ),),
           SizedBox(height: 8.0,),
           TextField(
+            cursorColor: Pallete.grayColor2,
             textAlign: TextAlign.left,
             decoration: InputDecoration(
               hintText: hint,
