@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medireach/screens/chatbot_screen.dart';
 import 'package:medireach/screens/dashboard_screen.dart';
 import 'package:medireach/screens/login_screen.dart';
 import 'package:medireach/screens/signup_auth_screen.dart';
@@ -24,13 +23,12 @@ class MediReach extends StatelessWidget {
             backgroundColor: Pallete.whiteColor,
           )
       ),
-      initialRoute: ChatBotScreen.id,
+      initialRoute: SplashScreen.id,
       routes: {
         SplashScreen.id : (context)=> SplashScreen(),
         LoginScreen.id:(context)=> LoginScreen(),
         SignUpScreen.id : (context)=> SignUpScreen(),
         DashboardScreen.id : (context)=> DashboardScreen(),
-        ChatBotScreen.id: (context)=> ChatBotScreen(),
         SurveyScreen.id : (context)=> SurveyScreen(),
       },
     );

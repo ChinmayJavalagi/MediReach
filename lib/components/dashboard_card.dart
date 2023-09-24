@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:medireach/screens/login_screen.dart';
 
 import '../utils/constants.dart';
+import '../utils/pallete.dart';
 
 List<String> src = [
   "assets/images/chatbot_message.png",
@@ -35,6 +36,7 @@ class DashboardCard extends StatelessWidget {
         );
       },
       child: Card(
+        color: Pallete.lightGrayColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
