@@ -47,10 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     textStyle: kHeaderTextStyle,
                   ),
                 ),
-                SizedBox(height: 0.02 * screenWidth),
+                SizedBox(height: 0.15 * screenWidth),
                 TextFieldForm(fieldname: "Email", hint: "ex: example@gmail.com"),
                 TextFieldForm(fieldname: "Password", hint: "ex: yourpassword"),
-                SizedBox(height: 35,),
+                SizedBox(height: 0.15 * screenWidth,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
