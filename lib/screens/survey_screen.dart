@@ -24,7 +24,6 @@ bool isVisible = false;
   void checkAnswer(bool userAnswer) {
     setState(() {
       if (surveyBrain.isFinished()) {
-        surveyBrain.reset();
         isVisible = true;
       } else {
         surveyBrain.nextQuestion();
@@ -63,41 +62,59 @@ bool isVisible = false;
                 ),
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, backgroundColor: Colors.green),
-                  onPressed: () {
-                    checkAnswer(true);
-                  },
-                  child: Text(
-                    "True",
-                    style: GoogleFonts.manrope(
-                      textStyle: kQuestionTextStyle,
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: GestureDetector(
+                      onTap: (){
+                        checkAnswer(true);
+                      },
+                      child: Card(
+                        elevation: 10,
+                        color: Pallete.primaryThemeColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0), // adds rounded corners
+                        ),
+                        child: Column(
+                          children: [
+                            Icon(Icons.check_rounded,color: Colors.white,size: 40,),
+                            Text('YES',style: GoogleFonts.manrope(
+                                textStyle: kOptionHeaderStyle
+                            ),)
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, backgroundColor: Colors.red),
-                  onPressed: () {
-                    checkAnswer(false);
-                  },
-                  child: Text(
-                    "False",
-                    style: GoogleFonts.manrope(
-                    textStyle: kQuestionTextStyle,
-                  ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: GestureDetector(
+                      onTap: (){
+                        checkAnswer(false);
+                      },
+                      child: Card(
+                        elevation: 10,
+                        color: Pallete.redColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0), // adds rounded corners
+                        ),
+                        child: Column(
+                          children: [
+                            Icon(Icons.close_rounded,color: Pallete.whiteColor,size: 40,),
+                            Text('NO',style: GoogleFonts.manrope(
+                                textStyle: kOptionHeaderStyle
+                            ),)
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
             Visibility(
               visible: isVisible,
