@@ -24,7 +24,7 @@ class MediReach extends StatelessWidget {
             backgroundColor: Pallete.whiteColor,
           )
       ),
-      initialRoute: DashboardScreen.id,
+      initialRoute: SurveyScreen.id,
       routes: {
         SplashScreen.id : (context)=> SplashScreen(),
         LoginScreen.id:(context)=> LoginScreen(),

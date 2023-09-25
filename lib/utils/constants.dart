@@ -66,3 +66,9 @@ const kChatHeaderStyle = TextStyle(
   fontSize: 22.0,
   fontWeight: FontWeight.bold,
 );
+
+const kOptionHeaderStyle = TextStyle(
+  color: Pallete.whiteColor,
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);

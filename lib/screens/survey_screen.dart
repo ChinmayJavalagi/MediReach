@@ -51,49 +51,53 @@ class _SurveyScreenState extends State<SurveyScreen> {
                 ),
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, backgroundColor: Colors.green),
-                  onPressed: () {
-                    setState(() {
-                      surveyBrain.nextQuestion();
-                    });
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Card(
+                      elevation: 10,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                      color: Pallete.grayColor,
+                      child: Column(
+                        children: [
+                          Icon(Icons.check,color: Pallete.primaryThemeColor,size: 80,),
+                          Text('YES',style:
+                            GoogleFonts.manrope(
+                              textStyle:kOptionHeaderStyle
+                            ),)
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Card(
+                      elevation: 10,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                      color: Pallete.grayColor,
+                      child: Column(
+                        children: [
+                          Icon(Icons.close,color: Pallete.redColor,size: 80,),
+                          Text('NO',style:
+                          GoogleFonts.manrope(
+                              textStyle:kOptionHeaderStyle
+                          ),)
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
 
-                  },
-                  child: Text(
-                    "True",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, backgroundColor: Colors.red),
-                  onPressed: () {
-                    setState(() {
-                      surveyBrain.nextQuestion();
-                    });
-                  },
-                  child: Text(
-                    "False",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       )
