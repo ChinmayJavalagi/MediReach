@@ -13,7 +13,6 @@ SurveyBrain surveyBrain = SurveyBrain();
 
 class SurveyScreen extends StatefulWidget {
   static String id = 'survey_screen';
-
   const SurveyScreen({Key? key}) : super(key: key);
 
   @override
@@ -26,80 +25,78 @@ class _SurveyScreenState extends State<SurveyScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-            children: [
-        Padding(
-        padding: const EdgeInsets.only(top: 30, left: 10,
-            right: 10,
-            bottom: 15),
-        child: Text(
-          "Let us know you",
-          style: GoogleFonts.manrope(
-            textStyle: kHeaderTextStyle,
-          ),
-        ),
-      ),
-      Expanded(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Center(
-            child: Text(
-              surveyBrain.getQuestionText(),
-              // "This is where the question text will go.",
-              textAlign: TextAlign.center,
-              style: GoogleFonts.manrope(
-                textStyle: kQuestionTextStyle,
+          children: [
+          Padding(
+              padding: const EdgeInsets.only(top: 30,left: 10,right: 10,bottom: 15),
+              child: Text(
+                "Let us know you",
+                style: GoogleFonts.manrope(
+                  textStyle: kHeaderTextStyle,
+                ),
               ),
             ),
-          ),
-        ),
-      ),
-    ),
-    Expanded(
-    child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: TextButton(
-    style: TextButton.styleFrom(
-    padding: EdgeInsets.zero, backgroundColor: Colors.green),
-    onPressed: () {
-    setState(() {
-    surveyBrain.nextQuestion();
-    });
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    surveyBrain.getQuestionText(),
+                    // "This is where the question text will go.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 25.0,
+                      color: Pallete.blackColor,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero, backgroundColor: Colors.green),
+                  onPressed: () {
+                    setState(() {
+                      surveyBrain.nextQuestion();
+                    });
 
-    },
-    child: Text(
-    "True",
-    style: TextStyle(
-    fontSize: 20.0,
-    color: Colors.white,
-    ),
-    ),
-    ),
-    ),
-    ),
-    Expanded(
-    child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: TextButton(
-    style: TextButton.styleFrom(
-    padding: EdgeInsets.zero, backgroundColor: Colors.red),
-    onPressed: () {
-    setState(() {
-    surveyBrain.nextQuestion();
-    });
-    },
-    child: Text(
-    "False",
-    style: TextStyle(
-    fontSize: 20.0,
-    color: Colors.white,
-    ),
-    ),
-    ),
-    ),
-    ),
-    ],
-    ),
-    )
+                  },
+                  child: Text(
+                    "True",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero, backgroundColor: Colors.red),
+                  onPressed: () {
+                    setState(() {
+                      surveyBrain.nextQuestion();
+                    });
+                  },
+                  child: Text(
+                    "False",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      )
     );
   }
 }
