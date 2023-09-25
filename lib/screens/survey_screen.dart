@@ -43,9 +43,9 @@ class _SurveyScreenState extends State<SurveyScreen> {
                     surveyBrain.getQuestionText(),
                     // "This is where the question text will go.",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.manrope(
-                    textStyle: kQuestionTextStyle,
-                  ),
+                    style: TextStyle(
+                      fontSize: 25.0,
+                      color: Pallete.blackColor,
                     ),
                   ),
                 ),
