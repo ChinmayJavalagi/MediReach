@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^4.0.3
   local_auth: ^2.1.6
   url_launcher: ^6.1.10
+  flutter_tts: ^3.8.3
 
 dev_dependencies:
   flutter_test:
