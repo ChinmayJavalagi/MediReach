@@ -51,7 +51,7 @@ const kQuestionHeaderTextStyle = TextStyle(
 
 const kQuestionTextStyle = TextStyle(
   color: Pallete.blackColor,
-  fontSize: 16.0,
+  fontSize: 24.0,
   fontWeight: FontWeight.w600,
 );
 

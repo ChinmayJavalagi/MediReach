@@ -36,7 +36,6 @@ class _SurveyScreenState extends State<SurveyScreen> {
               ),
             ),
             Expanded(
-              flex: 5,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Center(
@@ -44,9 +43,9 @@ class _SurveyScreenState extends State<SurveyScreen> {
                     surveyBrain.getQuestionText(),
                     // "This is where the question text will go.",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Pallete.blackColor,
+                    style: GoogleFonts.manrope(
+                    textStyle: kQuestionTextStyle,
+                  ),
                     ),
                   ),
                 ),

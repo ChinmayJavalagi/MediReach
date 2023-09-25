@@ -3,12 +3,12 @@ class SurveyBrain{
 
   int _questionNumber = 0;
   final List<SurveyBank> _questions = [
-    SurveyBank("I'm overweight or obese"),
-    SurveyBank("I have hypertension"),
-    SurveyBank("I have smoked cigarettes for at least 10 years"),
-    SurveyBank("I’ve recently suffered an injury"),
-    SurveyBank("I have high cholesterol"),
-    SurveyBank("I have diabetes"),
+    SurveyBank("1. I'm overweight or obese"),
+    SurveyBank("2. I have hypertension"),
+    SurveyBank("3. I have smoked cigarettes for at least 10 years"),
+    SurveyBank("4. I’ve recently suffered an injury"),
+    SurveyBank("5. I have high cholesterol"),
+    SurveyBank("6. I have diabetes"),
   ];
 
   void nextQuestion(){
