@@ -47,23 +47,23 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       , child: Text("View all", style: GoogleFonts.manrope(textStyle: itemCount>3? kEnabledViewAllButtonTextStyle: kDisabledViewAllButtonTextStyle),)),
                 ],
               ),
-              Expanded(
-                  child: Container(
-                    padding: EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      color: Pallete.whiteColor,
-                        border: Border.all(color: Pallete.grayColor),
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0))
-                    ),
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: showAll? itemCount:3,
-                      itemBuilder: (BuildContext context, int index) {
-                        return PreviousEnquiriesCard(index: index);
-                      },
-                    ),
-                  )
-              ),
+              // Expanded(
+              //     child: Container(
+              //       padding: EdgeInsets.all(8.0),
+              //       decoration: BoxDecoration(
+              //         color: Pallete.whiteColor,
+              //           border: Border.all(color: Pallete.grayColor),
+              //         borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0))
+              //       ),
+              //       child: ListView.builder(
+              //         shrinkWrap: true,
+              //         itemCount: showAll? itemCount:3,
+              //         itemBuilder: (BuildContext context, int index) {
+              //           return PreviousEnquiriesCard(index: index);
+              //         },
+              //       ),
+              //     )
+              // ),
               SizedBox(height: 30,),
               GridView.builder(
                 shrinkWrap: true,
