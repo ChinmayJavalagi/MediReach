@@ -45,22 +45,22 @@ bool isVisible = false;
                 ),
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Center(
-                  child: Text(
-                    surveyBrain.getQuestionText(),
-                    // "This is where the question text will go.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      color: Pallete.blackColor,
-                    ),
+            SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                  surveyBrain.getQuestionText(),
+                  // "This is where the question text will go.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    color: Pallete.blackColor,
                   ),
                 ),
               ),
             ),
+            SizedBox(height: 60,),
             Row(
               children: [
                 Expanded(
@@ -76,13 +76,17 @@ bool isVisible = false;
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0), // adds rounded corners
                         ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.check_rounded,color: Colors.white,size: 40,),
-                            Text('YES',style: GoogleFonts.manrope(
-                                textStyle: kOptionHeaderStyle
-                            ),)
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            children: [
+                              Icon(Icons.check_rounded,color: Colors.white,size: 40,),
+                              SizedBox(height: 10,),
+                              Text('YES',style: GoogleFonts.manrope(
+                                  textStyle: kOptionHeaderStyle
+                              ),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -101,13 +105,17 @@ bool isVisible = false;
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15.0), // adds rounded corners
                         ),
-                        child: Column(
-                          children: [
-                            Icon(Icons.close_rounded,color: Pallete.whiteColor,size: 40,),
-                            Text('NO',style: GoogleFonts.manrope(
-                                textStyle: kOptionHeaderStyle
-                            ),)
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            children: [
+                              Icon(Icons.close_rounded,color: Pallete.whiteColor,size: 40,),
+                              SizedBox(height: 10,),
+                              Text('NO',style: GoogleFonts.manrope(
+                                  textStyle: kOptionHeaderStyle
+                              ),)
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -115,6 +123,7 @@ bool isVisible = false;
                 ),
               ],
             ),
+            SizedBox(height: 240,),
             Visibility(
               visible: isVisible,
               child: Padding(
