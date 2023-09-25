@@ -6,7 +6,6 @@ import 'package:medireach/utils/pallete.dart';
 
 import '../components/custom_radio_button.dart';
 import '../utils/constants.dart';
-import '../utils/survey_questions.dart';
 import 'dashboard_screen.dart';
 
 SurveyBrain surveyBrain = SurveyBrain();
@@ -24,7 +23,6 @@ bool isVisible = false;
   void checkAnswer(bool userAnswer) {
     setState(() {
       if (surveyBrain.isFinished()) {
-        surveyBrain.reset();
         isVisible = true;
       } else {
         surveyBrain.nextQuestion();
