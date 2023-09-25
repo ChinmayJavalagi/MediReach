@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medireach/screens/chatbot_screen.dart';
 import 'package:medireach/screens/login_screen.dart';
+import 'package:medireach/url_launcher.dart';
 
 import '../utils/constants.dart';
 import '../utils/pallete.dart';
@@ -19,9 +20,14 @@ List<String> title = [
   "Generate Prescription",
   "Your History"
 ];
+List route = [
+  ChatBotScreen.id,
+  UrlLauncher.id,
+];
 
 class DashboardCard extends StatelessWidget {
   final int index;
+
   DashboardCard({
     required this.index,
   });
@@ -30,11 +36,15 @@ class DashboardCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => ChatBotScreen(),
-          ),
-        );
+        if(index!=1){
+          Navigator.pushNamed(context, route[index]);
+        }else{
+            UrlLauncher launcher = UrlLauncher();
+            String url = 'https://esanjeevani.mohfw.gov.in/#/patient/signin';
+            final Uri uri = Uri.parse('https://esanjeevani.mohfw.gov.in/#/patient/signin');
+            launcher.urllauncher(url);
+        }
+
       },
       child: Card(
         color: Pallete.lightGrayColor,
