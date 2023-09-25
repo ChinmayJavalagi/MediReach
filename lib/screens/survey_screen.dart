@@ -20,6 +20,18 @@ class SurveyScreen extends StatefulWidget {
 }
 
 class _SurveyScreenState extends State<SurveyScreen> {
+bool isVisible = false;
+  void checkAnswer(bool userAnswer) {
+    setState(() {
+      if (surveyBrain.isFinished()) {
+        surveyBrain.reset();
+        isVisible = true;
+      } else {
+        surveyBrain.nextQuestion();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,53 +63,51 @@ class _SurveyScreenState extends State<SurveyScreen> {
                 ),
               ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Card(
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
-                      ),
-                      color: Pallete.grayColor,
-                      child: Column(
-                        children: [
-                          Icon(Icons.check,color: Pallete.primaryThemeColor,size: 80,),
-                          Text('YES',style:
-                            GoogleFonts.manrope(
-                              textStyle:kOptionHeaderStyle
-                            ),)
-                        ],
-                      ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero, backgroundColor: Colors.green),
+                  onPressed: () {
+                    checkAnswer(true);
+                  },
+                  child: Text(
+                    "True",
+                    style: GoogleFonts.manrope(
+                      textStyle: kQuestionTextStyle,
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Card(
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
-                      ),
-                      color: Pallete.grayColor,
-                      child: Column(
-                        children: [
-                          Icon(Icons.close,color: Pallete.redColor,size: 80,),
-                          Text('NO',style:
-                          GoogleFonts.manrope(
-                              textStyle:kOptionHeaderStyle
-                          ),)
-                        ],
-                      ),
-                    ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero, backgroundColor: Colors.red),
+                  onPressed: () {
+                    checkAnswer(false);
+                  },
+                  child: Text(
+                    "False",
+                    style: GoogleFonts.manrope(
+                    textStyle: kQuestionTextStyle,
+                  ),
                   ),
                 ),
-              ],
-            )
-
+              ),
+            ),
+            Visibility(
+              visible: isVisible,
+              child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomButton(buttonText: 'Submit', buttonColor: Pallete.primaryThemeColor, onpressed: () {
+                    Navigator.pushNamed(context, DashboardScreen.id);
+                  },),
+                ),
+            ),
           ],
         ),
       )
