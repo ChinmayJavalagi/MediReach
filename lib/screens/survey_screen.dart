@@ -20,6 +20,18 @@ class SurveyScreen extends StatefulWidget {
 }
 
 class _SurveyScreenState extends State<SurveyScreen> {
+bool isVisible = false;
+  void checkAnswer(bool userAnswer) {
+    setState(() {
+      if (surveyBrain.isFinished()) {
+        surveyBrain.reset();
+        isVisible = true;
+      } else {
+        surveyBrain.nextQuestion();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,16 +70,12 @@ class _SurveyScreenState extends State<SurveyScreen> {
                   style: TextButton.styleFrom(
                       padding: EdgeInsets.zero, backgroundColor: Colors.green),
                   onPressed: () {
-                    setState(() {
-                      surveyBrain.nextQuestion();
-                    });
-
+                    checkAnswer(true);
                   },
                   child: Text(
                     "True",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+                    style: GoogleFonts.manrope(
+                      textStyle: kQuestionTextStyle,
                     ),
                   ),
                 ),
@@ -80,19 +88,25 @@ class _SurveyScreenState extends State<SurveyScreen> {
                   style: TextButton.styleFrom(
                       padding: EdgeInsets.zero, backgroundColor: Colors.red),
                   onPressed: () {
-                    setState(() {
-                      surveyBrain.nextQuestion();
-                    });
+                    checkAnswer(false);
                   },
                   child: Text(
                     "False",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                    ),
+                    style: GoogleFonts.manrope(
+                    textStyle: kQuestionTextStyle,
+                  ),
                   ),
                 ),
               ),
+            ),
+            Visibility(
+              visible: isVisible,
+              child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomButton(buttonText: 'Submit', buttonColor: Pallete.primaryThemeColor, onpressed: () {
+                    Navigator.pushNamed(context, DashboardScreen.id);
+                  },),
+                ),
             ),
           ],
         ),
